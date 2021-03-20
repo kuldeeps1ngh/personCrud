@@ -47,31 +47,4 @@
 
   
 
-  <ng-container matColumnDef="firstname">
-    <th mat-header-cell *matHeaderCellDef> First Name </th>
-    <td mat-cell *matCellDef="let element"> {{element.firstName}} </td>
-  </ng-container>
-
-  <ng-container matColumnDef="lastname">
-    <th mat-header-cell *matHeaderCellDef> Last Name </th>
-    <td mat-cell *matCellDef="let element"> {{element.lastName}} </td>
-  </ng-container>
-
-  <ng-container matColumnDef="email_id">
-    <th mat-header-cell *matHeaderCellDef> Email ID </th>
-    <td mat-cell *matCellDef="let element"> {{element.email}} </td>
-  </ng-container>
-
-  <ng-container matColumnDef="action">
-    <th mat-header-cell *matHeaderCellDef> Action </th>
-    <td mat-cell *matCellDef="let element"> 
-      <span class="faIcon">
-        <i [routerLink]="['../add']" [queryParams]="{data: element | json}" class="fa fa-pencil fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;
-        <i (click)="deletePerson(element.id)" class="fa fa-trash fa-lg" aria-hidden="true"></i>
-      </span>  
-    </td>
-  </ng-container>
-
-  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-  <tr mat-row *matRowDef="let row; columns: displayedColumns;" cdkDrag></tr>
-</table> -->
+  
