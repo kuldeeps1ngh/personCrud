@@ -1,0 +1,38 @@
+<div class="row py-4">
+  <h3>Add New Person</h3>
+</div>
+
+<form>
+  <div [formGroup]="addPersonFrmGrp" class="row py-4">
+    <div class="col-md-12 form-group">
+        <label for="firstname">First Name</label>
+        <input type="text" class="form-control" id="firstname" placeholder="Enter first name" formControlName="firstName">
+        <ng-container *ngIf="f.firstName.errors">
+          <div class="invalid" *ngIf="f.firstName.errors.required">
+            Required
+          </div>
+        </ng-container>
+    </div>
+    <div class="col-md-12 form-group">
+      <label for="firstname1">Last Name</label>
+      <input type="text" class="form-control" id="firstname1" placeholder="Enter last name" formControlName="lastName">
+      <ng-container *ngIf="f.lastName.errors">
+        <div class="invalid" *ngIf="f.lastName.errors.required">
+          Required
+        </div>
+      </ng-container>
+  </div>
+    <div class="col-md-12 form-group">
+        <label for="firstname2">Email ID</label>
+        <input type="text" class="form-control" id="firstname2" placeholder="Enter email id" formControlName="email">
+        <ng-container *ngIf="f.email.errors">
+          <div class="invalid" *ngIf="f.email.errors.required">
+            Required
+          </div>
+          <div class="invalid" *ngIf="f.email.errors.email">
+            Invalid email id
+          </div>
+        </ng-container>
+    </div>
+  </div>
+</form>
